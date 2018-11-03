@@ -2,32 +2,6 @@ package com.yzs.view;
 
 import java.awt.EventQueue;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.border.EmptyBorder;
-import javax.swing.text.DefaultCaret;
-
-import com.yzs.model.BufferPool;
-import com.yzs.model.Consumer;
-import com.yzs.model.Producer;
-
-import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
-import javax.swing.JLabel;
-import javax.swing.JComboBox;
-import javax.swing.LayoutStyle.ComponentPlacement;
-import javax.swing.DefaultComboBoxModel;
-import java.awt.Font;
-import javax.swing.ImageIcon;
-import javax.swing.JTextArea;
-import javax.swing.JButton;
-import java.awt.Color;
-import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.awt.event.ActionEvent;
-import javax.swing.UIManager;
-
 public class MainFrame extends JFrame implements Runnable{
 	private ArrayList<Thread> tList;
 	private volatile int count=1;
@@ -139,7 +113,7 @@ public class MainFrame extends JFrame implements Runnable{
 		clearButton.setIcon(new ImageIcon(MainFrame.class.getResource("/images/recycle.png")));
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
-			gl_contentPane.createParallelGroup(Alignment.TRAILING)
+			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addContainerGap(36, Short.MAX_VALUE)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
@@ -154,16 +128,16 @@ public class MainFrame extends JFrame implements Runnable{
 							.addComponent(lblNewLabel_5)
 							.addPreferredGap(ComponentPlacement.RELATED)
 							.addComponent(lblNewLabel_6))
-						.addComponent(scrollPane_1, GroupLayout.PREFERRED_SIZE, 377, GroupLayout.PREFERRED_SIZE))
-					.addGap(71))
-				.addGroup(Alignment.LEADING, gl_contentPane.createSequentialGroup()
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING, false)
+						.addComponent(scrollPane_1, GroupLayout.PREFERRED_SIZE, 425, GroupLayout.PREFERRED_SIZE))
+					.addGap(23))
+				.addGroup(gl_contentPane.createSequentialGroup()
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
 						.addGroup(gl_contentPane.createSequentialGroup()
 							.addGap(154)
 							.addComponent(byStepButton)
 							.addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 							.addComponent(aotuButton))
-						.addGroup(Alignment.LEADING, gl_contentPane.createSequentialGroup()
+						.addGroup(gl_contentPane.createSequentialGroup()
 							.addGap(184)
 							.addComponent(lblNewLabel_1)
 							.addPreferredGap(ComponentPlacement.RELATED)
@@ -181,7 +155,7 @@ public class MainFrame extends JFrame implements Runnable{
 						.addGroup(gl_contentPane.createSequentialGroup()
 							.addGap(84)
 							.addComponent(clearButton, GroupLayout.PREFERRED_SIZE, 97, GroupLayout.PREFERRED_SIZE)))
-					.addContainerGap(255, Short.MAX_VALUE))
+					.addContainerGap(266, Short.MAX_VALUE))
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
